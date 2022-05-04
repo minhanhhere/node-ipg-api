@@ -33,7 +33,11 @@ export class AppController {
   @Get('case-type')
   // ?countryCode=${countryCode}&showArchived=false&isActive=true&includeSubTypes=false
   getCaseTypes(@Query('countryCode') countryCode): any {
-    const json = fs.readFileSync(`./case-types/casetype.${countryCode}.json`, {encoding:'utf8', flag:'r'});
-    return JSON.parse(json);
+    try {
+      const json = fs.readFileSync(`./case-types/casetype.${countryCode}.json`, {encoding:'utf8', flag:'r'});
+      return JSON.parse(json);
+    } catch {
+      return [];
+    }
   }
 }
