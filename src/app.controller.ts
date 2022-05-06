@@ -34,13 +34,16 @@ export class AppController {
   // ?countryCode=${countryCode}&showArchived=false&isActive=true&includeSubTypes=false
   getCaseTypes(@Query('countryCode') countryCode, @Query('checkAvailable') checkAvailable : string): any {
     try {
+      const seed = this.getCountryCodeSeed(countryCode);
       const json = fs.readFileSync(`./case-types/casetype.${countryCode}.json`, {encoding:'utf8', flag:'r'});
       const caseTypes = JSON.parse(json);
       
       if (checkAvailable === 'true') {
         for (var i = 0; i < caseTypes.length; i++) {
           const c = caseTypes[i];
-          c.isAvailable = countryCode === 'US' && (i === 3 || i === 4 || i === 8 || i === 20) ? false : true;
+          // random logic for isAvailable
+          c.isAvailable = (((seed + c.id || 0) % 9) || 9) > 4;
+          // c.isAvailable = countryCode === 'US' && (i === 3 || i === 4 || i === 8 || i === 20) ? false : true;
         }
       }
       
@@ -48,5 +51,9 @@ export class AppController {
     } catch {
       return [];
     }
+  }
+
+  getCountryCodeSeed(countryCode: string) {
+    return countryCode.charCodeAt(0) * 100 + (countryCode.length > 1 ? countryCode.charCodeAt(1) : 0)
   }
 }
