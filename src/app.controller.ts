@@ -3,6 +3,7 @@ import * as fs from 'fs';
 import { AppService } from './app.service';
 import { Countries } from './app.countries';
 import { CaseCategories } from './app.casecategories';
+import { CaseDefaultStages } from './app.case-default-stages';
 
 @Controller()
 export class AppController {
@@ -51,6 +52,11 @@ export class AppController {
     } catch {
       return [];
     }
+  }
+
+  @Get('case-default-stages')
+  getCaseDefaultStages(): any {
+    return CaseDefaultStages;
   }
 
   getCountryCodeSeed(countryCode: string) {
