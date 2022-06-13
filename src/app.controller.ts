@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { Countries } from './app.countries';
 import { CaseCategories } from './app.casecategories';
 import { CaseDefaultStages } from './app.case-default-stages';
+import { CaseDefaultMilestones } from './app.case-default-milestones';
 
 @Controller()
 export class AppController {
@@ -57,6 +58,11 @@ export class AppController {
   @Get('case-default-stages')
   getCaseDefaultStages(): any {
     return CaseDefaultStages;
+  }
+
+  @Get('case-default-milestones')
+  getCaseDefaultMilestones(): any {
+    return CaseDefaultMilestones;
   }
 
   getCountryCodeSeed(countryCode: string) {
