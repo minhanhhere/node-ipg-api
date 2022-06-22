@@ -5,6 +5,8 @@ import { Countries } from './app.countries';
 import { CaseCategories } from './app.casecategories';
 import { CaseDefaultStages } from './app.case-default-stages';
 import { CaseDefaultMilestones } from './app.case-default-milestones';
+import { Tasks } from './app.tasks';
+import { ReportNotes } from './app.report-notes';
 import * as sortBy from 'lodash/sortBy';
 
 
@@ -82,6 +84,16 @@ export class AppController {
   @Get('case-default-milestones')
   getCaseDefaultMilestones(): any {
     return sortBy(CaseDefaultMilestones, t => t.caseDefaultMilestoneName.toLowerCase());
+  }
+
+  @Get('task-bank')
+  getTaskBank(): any {
+    return sortBy(Tasks, t => t.taskName.toLowerCase());
+  }
+
+  @Get('report-note-bank')
+  getReportNoteBank(): any {
+    return sortBy(ReportNotes, t => t.description.toLowerCase());
   }
 
   getCountryCodeSeed(countryCode: string) {
