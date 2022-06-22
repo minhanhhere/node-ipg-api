@@ -5,6 +5,8 @@ import { Countries } from './app.countries';
 import { CaseCategories } from './app.casecategories';
 import { CaseDefaultStages } from './app.case-default-stages';
 import { CaseDefaultMilestones } from './app.case-default-milestones';
+import sortBy from 'lodash/sortBy';
+
 
 @Controller()
 export class AppController {
@@ -24,7 +26,24 @@ export class AppController {
 
   @Get('country')
   getCountries(): any {
-    return Countries;
+    const prepend = [
+      {
+        "countryCode": "--",
+        "countryName": "Multi Country",
+        "countryCodeISO": "---",
+        "isDestination": false,
+        "countryApiKey": "95cc9395-2a43-43e8-8ec9-2079a00c2488"
+      },
+      {
+          "countryCode": "GO",
+          "countryName": "*Global/Generic",
+          "countryCodeISO": "GLB",
+          "isDestination": true,
+          "countryApiKey": "eb4ef77d-1658-e911-a971-eec0acf7c356"
+      }
+    ];
+    const sorted = sortBy(Countries, t => t.countryName);
+    return [...prepend, ...sorted];
   }
 
   @Get('case-category')
@@ -57,12 +76,12 @@ export class AppController {
 
   @Get('case-default-stages')
   getCaseDefaultStages(): any {
-    return CaseDefaultStages;
+    return sortBy(CaseDefaultStages, t => t.caseDefaultStageName);
   }
 
   @Get('case-default-milestones')
   getCaseDefaultMilestones(): any {
-    return CaseDefaultMilestones;
+    return sortBy(CaseDefaultMilestones, t => t.caseDefaultMilestoneName);
   }
 
   getCountryCodeSeed(countryCode: string) {

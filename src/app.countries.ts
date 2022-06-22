@@ -1,19 +1,5 @@
 export const Countries = [
     {
-        "countryCode": "--",
-        "countryName": "Multi Country",
-        "countryCodeISO": "---",
-        "isDestination": false,
-        "countryApiKey": "95cc9395-2a43-43e8-8ec9-2079a00c2488"
-    },
-    {
-        "countryCode": "GO",
-        "countryName": "*Global/Generic",
-        "countryCodeISO": "GLB",
-        "isDestination": true,
-        "countryApiKey": "eb4ef77d-1658-e911-a971-eec0acf7c356"
-    },
-    {
         "countryCode": "S-",
         "countryName": "Super Long Name Country With Nothing Special",
         "countryCodeISO": "S--",
