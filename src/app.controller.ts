@@ -42,7 +42,7 @@ export class AppController {
           "countryApiKey": "eb4ef77d-1658-e911-a971-eec0acf7c356"
       }
     ];
-    const sorted = sortBy(Countries, t => t.countryName);
+    const sorted = sortBy(Countries, t => t.countryName.toLowerCase());
     return [...prepend, ...sorted];
   }
 
@@ -68,7 +68,7 @@ export class AppController {
         }
       }
       
-      return sortBy(caseTypes, t => t.caseType);
+      return sortBy(caseTypes, t => t.caseType.toLowerCase());
     } catch {
       return [];
     }
@@ -76,12 +76,12 @@ export class AppController {
 
   @Get('case-default-stages')
   getCaseDefaultStages(): any {
-    return sortBy(CaseDefaultStages, t => t.caseDefaultStageName);
+    return sortBy(CaseDefaultStages, t => t.caseDefaultStageName.toLowerCase());
   }
 
   @Get('case-default-milestones')
   getCaseDefaultMilestones(): any {
-    return sortBy(CaseDefaultMilestones, t => t.caseDefaultMilestoneName);
+    return sortBy(CaseDefaultMilestones, t => t.caseDefaultMilestoneName.toLowerCase());
   }
 
   getCountryCodeSeed(countryCode: string) {
