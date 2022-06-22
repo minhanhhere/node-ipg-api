@@ -5,7 +5,7 @@ import { Countries } from './app.countries';
 import { CaseCategories } from './app.casecategories';
 import { CaseDefaultStages } from './app.case-default-stages';
 import { CaseDefaultMilestones } from './app.case-default-milestones';
-import sortBy from 'lodash/sortBy';
+import * as sortBy from 'lodash/sortBy';
 
 
 @Controller()
@@ -68,7 +68,7 @@ export class AppController {
         }
       }
       
-      return caseTypes;
+      return sortBy(caseTypes, t => t.caseType);
     } catch {
       return [];
     }
