@@ -40412,5 +40412,16 @@ export const Tasks = [
         "createdBy": null,
         "createdDate": null,
         "updateHistory": []
+    },
+    {
+        "taskBankId": 9992,
+        "taskName": "1ZAV approved and issued; valid until [DATE]. Approval sent to immigration service provider.  OR Application denied. Scheduled call with attorney/manager and employee. ZAV approved and issued; valid until [DATE]. Approval sent to immigration service provider.  OR Application denied. Scheduled call with attorney/manager and employee.",
+        "slaTimeframe": 0,
+        "slaTimePeriod": "BUSINESS_DAYS",
+        "slaFromLastTask": "LASTCOMPLETION",
+        "isActive": true,
+        "createdBy": null,
+        "createdDate": null,
+        "updateHistory": []
     }
 ];
