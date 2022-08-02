@@ -810,8 +810,28 @@ export const CaseDefaultMilestones = [
         "isActive": true
     },
     {
-        "caseDefaultMilestoneId": 991,
-        "caseDefaultMilestoneName": "Work Permit filed. Work Permit filed. Work Permit filed. Work Permit filed. Work Permit filed. Work Permit filed. Work Permit filed",
+        "caseDefaultMilestoneId": 992,
+        "caseDefaultMilestoneName": "1Work Permit filed. Work Permit filed. Work Permit filed. Work Permit filed. Work Permit filed.",
+        "isActive": true
+    },
+    {
+        "caseDefaultMilestoneId": 993,
+        "caseDefaultMilestoneName": "1Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel commodo purus. Fusce eget eros vel sapien semper faucibus non ut enim. Donec pharetra lacus justo, non tempor urna tincidunt vel.",
+        "isActive": true
+    },
+    {
+        "caseDefaultMilestoneId": 994,
+        "caseDefaultMilestoneName": "1XLorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel commodo purus. Fusce eget eros vel sapien semper faucibus non ut enim. Donec pharetra lacus justo, non tempor urna tincidunt vel. Duis ut egestas ante. Phasellus a ipsum et lectus fringilla porta a vitae ipsum.",
+        "isActive": true
+    },
+    {
+        "caseDefaultMilestoneId": 995,
+        "caseDefaultMilestoneName": "1Nulla tempor venenatis justo, ac molestie dui iaculis a. Pellentesque gravida ac sapien gravida condimentum. 1Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel commodo purus. Fusce eget eros vel sapien semper faucibus non ut enim. Donec pharetra lacus justo, non tempor urna tincidunt vel. Duis ut egestas ante. Phasellus a ipsum et lectus fringilla porta a vitae ipsum.",
+        "isActive": true
+    },
+    {
+        "caseDefaultMilestoneId": 996,
+        "caseDefaultMilestoneName": "1Praesent pellentesque magna sed ante tristique, quis sollicitudin urna pulvinar. 1Nulla tempor venenatis justo, ac molestie dui iaculis a. Pellentesque gravida ac sapien gravida condimentum. 1Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel commodo purus. Fusce eget eros vel sapien semper faucibus non ut enim. Donec pharetra lacus justo, non tempor urna tincidunt vel. Duis ut egestas ante. Phasellus a ipsum et lectus fringilla porta a vitae ipsum.",
         "isActive": true
     }
 ];
